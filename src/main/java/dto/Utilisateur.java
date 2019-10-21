@@ -1,5 +1,6 @@
 package dto;
 
+import javax.persistence.Access;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -8,16 +9,12 @@ import javax.persistence.Table;
 @Table(name= "utilisateur")
 public class Utilisateur {
 
-	@Column(name="nom")
 	private String nom;
 	
-	@Column(name="prenom")
 	private String prenom;
 	
-	@Column(name="mail")
 	private String mail;
 	
-	@Column(name="mdp")
 	private String mdp;
 	
 	public Utilisateur(String nom, String prenom, String mail, String mdp) {
