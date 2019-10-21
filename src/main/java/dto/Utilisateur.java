@@ -3,12 +3,16 @@ package dto;
 import javax.persistence.Access;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name= "utilisateur")
 public class Utilisateur {
 
+	@Id
+	private int id_utilisateur;
+	
 	private String nom;
 	
 	private String prenom;
