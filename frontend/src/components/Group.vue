@@ -4,10 +4,41 @@
       <h4>Groupe</h4>
     </div>
 
-    <div></div>
+    <div>
+      <b-list-group v-for="group in info" :key="group.id">
+        <b-list-group-item>
+          <div class="post-text">{{group.nom}}</div>
+        </b-list-group-item>
+      </b-list-group>
+    </div>
   </div>
 </template>
 
+<script>
+import axios from "axios";
+export default {
+  components: {
+    // ListItem
+  },
+  data() {
+    return {
+      info: [],
+      id: 1,
+      message: ""
+    };
+  },
+  created: function() {
+    axios.get("http://127.0.0.1:8000/api/group/").then(res => {
+      for (let elt of res.data) {
+        this.info.push({
+          id: this.id++,
+          nom: elt.nom
+        });
+      }
+    });
+  }
+};
+</script>
 
 <style scoped>
 .div-group {
