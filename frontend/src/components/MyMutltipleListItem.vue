@@ -27,6 +27,8 @@ export default {
   width: 20%;
   height: 90vh;
   float: right;
+  position: fixed;
+  right: 0;
   overflow: auto;
 }
 </style>

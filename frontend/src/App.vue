@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <Header />
-    <Group />
-    <Wall />
-    <TopListePost />
+    <div class="element">
+      <Group />
+      <Wall />
+      <TopListePost />
+    </div>
   </div>
 </template>
 
@@ -33,7 +35,6 @@ export default {
 }
 
 .element {
-  background-color: yellow;
-  display: flex;
+  padding-top: 56px;
 }
 </style>
