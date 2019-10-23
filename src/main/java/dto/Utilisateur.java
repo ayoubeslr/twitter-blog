@@ -21,6 +21,10 @@ public class Utilisateur {
 	
 	private String mdp;
 	
+	public Utilisateur() {
+		
+	}
+	
 	public Utilisateur(String nom, String prenom, String mail, String mdp) {
 		this.nom = nom;
 		this.prenom = prenom;

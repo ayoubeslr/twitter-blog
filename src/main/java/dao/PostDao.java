@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import dto.Post;
@@ -20,6 +22,11 @@ private EntityManager entityManager;
 		entityManager.persist(e);
 		entityManager.getTransaction().commit();
 		
+	}
+	
+	public List<Post> get() {
+		return entityManager.createQuery("select p from Post p", Post.class)
+				            .getResultList();	
 	}
 
 }

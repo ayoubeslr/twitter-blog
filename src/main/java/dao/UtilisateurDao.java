@@ -1,7 +1,10 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
+import dto.Post;
 import dto.Utilisateur;
 
 
@@ -20,6 +23,11 @@ private EntityManager entityManager;
 		entityManager.persist(e);
 		entityManager.getTransaction().commit();
 		
+	}
+	
+	public List<Utilisateur> get() {
+		return entityManager.createQuery("select u from Utilisateur u", Utilisateur.class)
+				            .getResultList();	
 	}
 
 }

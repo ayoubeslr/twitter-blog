@@ -13,6 +13,10 @@ public class Commentaire {
 		this.post = post;
 	}
 
+	public Commentaire() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getLibelle() {
 		return libelle;
 	}
